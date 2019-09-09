@@ -1,0 +1,168 @@
+/* ----------------- Everything ----------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.section-container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+}
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.text-spread{
+    letter-spacing: 10px;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.hr-white{
+    height: 1px;
+    color: #fff;
+    background: white;
+    border:none;
+}
+
+.hr-multi{
+    height: 1px;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    background-attachment: fixed;
+    border: none;
+}
+
+.text-multi{
+    background: -webkit-linear-gradient(#EE7752, #E73C7E, #23A6D5, #23D5AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    background-attachment: fixed;
+}
+
+/* ----------------- Introduction ----------------- */
+#introduction{
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    background-attachment: fixed;
+}
+
+/* ----------------- About ----------------- */
+#about{
+    background-color:#282734;
+}
+
+/* ----------------- Projects ----------------- */
+#projects{
+    background-color:#282734;
+}
+
+/* ----------------- Contact ----------------- */
+#contact{
+    background-color:#282734;
+}
+
+@media screen and (max-width:480px){
+    /* ----------------- Introduction ----------------- */
+    .about-h3{
+        margin-left: 13%;
+    }
+    .about-p{
+        font-size: 1rem;
+        text-align: left;
+        margin-left: 15%;
+        margin-bottom: 15%;
+    }
+    /* ----------------- About ----------------- */
+            
+    /* ----------- Projects ---------- */
+                
+    /* ----------- Contact ---------- */
+
+}
+
+@media screen and (min-width:481px){
+    /* ----------- Introduction ---------- */
+       
+    /* ----------- About ---------- */
+            
+    /* ----------- Projects ---------- */
+                
+    /* ----------- Contact ---------- */
+}
+
+@media screen and (min-width:1024px){
+    /* ----------- Introduction ---------- */
+    .about-h3{
+        margin-left: 5%;
+    }
+    .about-p{
+        margin-left: 7%;
+        margin-bottom: 5%;
+        font-size: 1rem;
+        text-align: left;
+        width: 40%;
+ 
+    }       
+    /* ----------- About ---------- */
+            
+    /* ----------- Projects ---------- */
+                
+    /* ----------- Contact ---------- */
+}
+
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+
+    }
+    50%{
+        background-position: 100% 50%;
+        
+    }    
+    100%{
+        background-position: 0 50%;
+        
+    }
+}
+
+.fade-in{
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
